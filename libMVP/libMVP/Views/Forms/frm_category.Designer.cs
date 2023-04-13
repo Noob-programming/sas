@@ -35,16 +35,16 @@
 			this.txtName = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
-			this.btnFirst = new DevExpress.XtraEditors.SimpleButton();
-			this.btnLast = new DevExpress.XtraEditors.SimpleButton();
 			this.btnNext = new DevExpress.XtraEditors.SimpleButton();
 			this.btnPrevios = new DevExpress.XtraEditors.SimpleButton();
+			this.btnFirst = new DevExpress.XtraEditors.SimpleButton();
+			this.btnLast = new DevExpress.XtraEditors.SimpleButton();
 			this.groupBox3 = new System.Windows.Forms.GroupBox();
-			this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
-			this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-			this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
 			this.btnDeleteAll = new DevExpress.XtraEditors.SimpleButton();
+			this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
+			this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
 			this.btnNew = new DevExpress.XtraEditors.SimpleButton();
+			this.btnSave = new DevExpress.XtraEditors.SimpleButton();
 			this.dvg = new System.Windows.Forms.DataGridView();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
@@ -120,25 +120,9 @@
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "اسهم التنقال";
 			// 
-			// btnFirst
-			// 
-			this.btnFirst.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-			this.btnFirst.Location = new System.Drawing.Point(6, 25);
-			this.btnFirst.Name = "btnFirst";
-			this.btnFirst.Size = new System.Drawing.Size(43, 23);
-			this.btnFirst.TabIndex = 0;
-			// 
-			// btnLast
-			// 
-			this.btnLast.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-			this.btnLast.Location = new System.Drawing.Point(172, 25);
-			this.btnLast.Name = "btnLast";
-			this.btnLast.Size = new System.Drawing.Size(44, 23);
-			this.btnLast.TabIndex = 0;
-			// 
 			// btnNext
 			// 
-			this.btnNext.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+			this.btnNext.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.ImageOptions.Image")));
 			this.btnNext.Location = new System.Drawing.Point(122, 25);
 			this.btnNext.Name = "btnNext";
 			this.btnNext.Size = new System.Drawing.Size(44, 23);
@@ -146,11 +130,27 @@
 			// 
 			// btnPrevios
 			// 
-			this.btnPrevios.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
+			this.btnPrevios.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPrevios.ImageOptions.Image")));
 			this.btnPrevios.Location = new System.Drawing.Point(55, 25);
 			this.btnPrevios.Name = "btnPrevios";
 			this.btnPrevios.Size = new System.Drawing.Size(43, 23);
 			this.btnPrevios.TabIndex = 3;
+			// 
+			// btnFirst
+			// 
+			this.btnFirst.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFirst.ImageOptions.Image")));
+			this.btnFirst.Location = new System.Drawing.Point(6, 25);
+			this.btnFirst.Name = "btnFirst";
+			this.btnFirst.Size = new System.Drawing.Size(43, 23);
+			this.btnFirst.TabIndex = 0;
+			// 
+			// btnLast
+			// 
+			this.btnLast.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLast.ImageOptions.Image")));
+			this.btnLast.Location = new System.Drawing.Point(172, 25);
+			this.btnLast.Name = "btnLast";
+			this.btnLast.Size = new System.Drawing.Size(44, 23);
+			this.btnLast.TabIndex = 0;
 			// 
 			// groupBox3
 			// 
@@ -167,47 +167,11 @@
 			this.groupBox3.TabStop = false;
 			this.groupBox3.Text = "العمليات المتاحة";
 			// 
-			// btnAdd
-			// 
-			this.btnAdd.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnAdd.Appearance.Options.UseFont = true;
-			this.btnAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton8.ImageOptions.Image")));
-			this.btnAdd.Location = new System.Drawing.Point(372, 25);
-			this.btnAdd.Name = "btnAdd";
-			this.btnAdd.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.btnAdd.Size = new System.Drawing.Size(98, 44);
-			this.btnAdd.TabIndex = 0;
-			this.btnAdd.Text = "اضافة";
-			// 
-			// btnSave
-			// 
-			this.btnSave.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnSave.Appearance.Options.UseFont = true;
-			this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.ImageOptions.Image")));
-			this.btnSave.Location = new System.Drawing.Point(268, 25);
-			this.btnSave.Name = "btnSave";
-			this.btnSave.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.btnSave.Size = new System.Drawing.Size(98, 44);
-			this.btnSave.TabIndex = 1;
-			this.btnSave.Text = "حفظ";
-			// 
-			// btnDelete
-			// 
-			this.btnDelete.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnDelete.Appearance.Options.UseFont = true;
-			this.btnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton6.ImageOptions.Image")));
-			this.btnDelete.Location = new System.Drawing.Point(164, 25);
-			this.btnDelete.Name = "btnDelete";
-			this.btnDelete.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.btnDelete.Size = new System.Drawing.Size(98, 44);
-			this.btnDelete.TabIndex = 2;
-			this.btnDelete.Text = "مسح";
-			// 
 			// btnDeleteAll
 			// 
 			this.btnDeleteAll.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnDeleteAll.Appearance.Options.UseFont = true;
-			this.btnDeleteAll.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton7.ImageOptions.Image")));
+			this.btnDeleteAll.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteAll.ImageOptions.Image")));
 			this.btnDeleteAll.Location = new System.Drawing.Point(60, 25);
 			this.btnDeleteAll.Name = "btnDeleteAll";
 			this.btnDeleteAll.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -215,17 +179,54 @@
 			this.btnDeleteAll.TabIndex = 3;
 			this.btnDeleteAll.Text = "مسح الكل";
 			// 
+			// btnAdd
+			// 
+			this.btnAdd.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnAdd.Appearance.Options.UseFont = true;
+			this.btnAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.ImageOptions.Image")));
+			this.btnAdd.Location = new System.Drawing.Point(372, 25);
+			this.btnAdd.Name = "btnAdd";
+			this.btnAdd.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.btnAdd.Size = new System.Drawing.Size(98, 44);
+			this.btnAdd.TabIndex = 0;
+			this.btnAdd.Text = "اضافة";
+			this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+			// 
+			// btnDelete
+			// 
+			this.btnDelete.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnDelete.Appearance.Options.UseFont = true;
+			this.btnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.Image")));
+			this.btnDelete.Location = new System.Drawing.Point(164, 25);
+			this.btnDelete.Name = "btnDelete";
+			this.btnDelete.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.btnDelete.Size = new System.Drawing.Size(98, 44);
+			this.btnDelete.TabIndex = 2;
+			this.btnDelete.Text = "مسح";
+			// 
 			// btnNew
 			// 
 			this.btnNew.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnNew.Appearance.Options.UseFont = true;
-			this.btnNew.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton9.ImageOptions.Image")));
+			this.btnNew.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.ImageOptions.Image")));
 			this.btnNew.Location = new System.Drawing.Point(476, 25);
 			this.btnNew.Name = "btnNew";
 			this.btnNew.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.btnNew.Size = new System.Drawing.Size(97, 44);
 			this.btnNew.TabIndex = 4;
 			this.btnNew.Text = "جديد";
+			// 
+			// btnSave
+			// 
+			this.btnSave.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnSave.Appearance.Options.UseFont = true;
+			this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
+			this.btnSave.Location = new System.Drawing.Point(268, 25);
+			this.btnSave.Name = "btnSave";
+			this.btnSave.RightToLeft = System.Windows.Forms.RightToLeft.No;
+			this.btnSave.Size = new System.Drawing.Size(98, 44);
+			this.btnSave.TabIndex = 1;
+			this.btnSave.Text = "حفظ";
 			// 
 			// dvg
 			// 
