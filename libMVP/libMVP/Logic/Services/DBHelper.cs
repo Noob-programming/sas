@@ -14,9 +14,9 @@ namespace libMVP.Logic.Services
 			builder.DataSource = Properties.Settings.Default.ServerName;
 			builder.InitialCatalog = Properties.Settings.Default.DBName;
 
-			builder.PersistSecurityInfo = Properties.Settings.Default.SecurityInfo;
-			builder.UserID = Properties.Settings.Default.UserName;
-			builder.Password = Properties.Settings.Default.PassWord;
+			builder.IntegratedSecurity = Properties.Settings.Default.SecurityInfo;
+			//builder.UserID = Properties.Settings.Default.UserName;
+			//builder.Password = Properties.Settings.Default.PassWord;
 
 			return new SqlConnection(builder.ConnectionString);
 		}
