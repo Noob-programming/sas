@@ -54,9 +54,15 @@
 			// 
 			// dvg
 			// 
+			this.dvg.AllowUserToAddRows = false;
+			this.dvg.AllowUserToDeleteRows = false;
+			this.dvg.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dvg.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
 			this.dvg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dvg.Location = new System.Drawing.Point(12, 296);
 			this.dvg.Name = "dvg";
+			this.dvg.ReadOnly = true;
+			this.dvg.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dvg.Size = new System.Drawing.Size(589, 192);
 			this.dvg.TabIndex = 9;
 			// 
@@ -65,48 +71,52 @@
 			this.btnDeleteAll.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnDeleteAll.Appearance.Options.UseFont = true;
 			this.btnDeleteAll.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteAll.ImageOptions.Image")));
-			this.btnDeleteAll.Location = new System.Drawing.Point(60, 25);
+			this.btnDeleteAll.Location = new System.Drawing.Point(43, 25);
 			this.btnDeleteAll.Name = "btnDeleteAll";
 			this.btnDeleteAll.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.btnDeleteAll.Size = new System.Drawing.Size(98, 44);
+			this.btnDeleteAll.Size = new System.Drawing.Size(111, 44);
 			this.btnDeleteAll.TabIndex = 3;
 			this.btnDeleteAll.Text = "مسح الكل";
+			this.btnDeleteAll.Click += new System.EventHandler(this.btnDeleteAll_Click);
 			// 
 			// btnAdd
 			// 
 			this.btnAdd.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnAdd.Appearance.Options.UseFont = true;
 			this.btnAdd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.ImageOptions.Image")));
-			this.btnAdd.Location = new System.Drawing.Point(372, 25);
+			this.btnAdd.Location = new System.Drawing.Point(368, 25);
 			this.btnAdd.Name = "btnAdd";
 			this.btnAdd.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.btnAdd.Size = new System.Drawing.Size(98, 44);
 			this.btnAdd.TabIndex = 0;
 			this.btnAdd.Text = "اضافة";
+			this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
 			// 
 			// btnDelete
 			// 
 			this.btnDelete.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnDelete.Appearance.Options.UseFont = true;
 			this.btnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.Image")));
-			this.btnDelete.Location = new System.Drawing.Point(164, 25);
+			this.btnDelete.Location = new System.Drawing.Point(160, 25);
 			this.btnDelete.Name = "btnDelete";
 			this.btnDelete.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.btnDelete.Size = new System.Drawing.Size(98, 44);
 			this.btnDelete.TabIndex = 2;
 			this.btnDelete.Text = "مسح";
+			this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
 			// 
 			// btnNew
 			// 
 			this.btnNew.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnNew.Appearance.Options.UseFont = true;
 			this.btnNew.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.ImageOptions.Image")));
-			this.btnNew.Location = new System.Drawing.Point(476, 25);
+			this.btnNew.Location = new System.Drawing.Point(472, 25);
 			this.btnNew.Name = "btnNew";
 			this.btnNew.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.btnNew.Size = new System.Drawing.Size(97, 44);
 			this.btnNew.TabIndex = 4;
 			this.btnNew.Text = "جديد";
+			this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
 			// 
 			// groupBox3
 			// 
@@ -128,44 +138,49 @@
 			this.btnSave.Appearance.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnSave.Appearance.Options.UseFont = true;
 			this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
-			this.btnSave.Location = new System.Drawing.Point(268, 25);
+			this.btnSave.Location = new System.Drawing.Point(264, 25);
 			this.btnSave.Name = "btnSave";
 			this.btnSave.RightToLeft = System.Windows.Forms.RightToLeft.No;
 			this.btnSave.Size = new System.Drawing.Size(98, 44);
 			this.btnSave.TabIndex = 1;
 			this.btnSave.Text = "حفظ";
+			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
 			// 
 			// btnNext
 			// 
 			this.btnNext.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.ImageOptions.Image")));
-			this.btnNext.Location = new System.Drawing.Point(122, 25);
+			this.btnNext.Location = new System.Drawing.Point(160, 25);
 			this.btnNext.Name = "btnNext";
-			this.btnNext.Size = new System.Drawing.Size(44, 23);
+			this.btnNext.Size = new System.Drawing.Size(42, 23);
 			this.btnNext.TabIndex = 2;
+			this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
 			// 
 			// btnPrevios
 			// 
 			this.btnPrevios.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPrevios.ImageOptions.Image")));
-			this.btnPrevios.Location = new System.Drawing.Point(55, 25);
+			this.btnPrevios.Location = new System.Drawing.Point(104, 25);
 			this.btnPrevios.Name = "btnPrevios";
-			this.btnPrevios.Size = new System.Drawing.Size(43, 23);
+			this.btnPrevios.Size = new System.Drawing.Size(42, 23);
 			this.btnPrevios.TabIndex = 3;
+			this.btnPrevios.Click += new System.EventHandler(this.btnPrevios_Click);
 			// 
 			// btnFirst
 			// 
 			this.btnFirst.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFirst.ImageOptions.Image")));
-			this.btnFirst.Location = new System.Drawing.Point(6, 25);
+			this.btnFirst.Location = new System.Drawing.Point(54, 25);
 			this.btnFirst.Name = "btnFirst";
-			this.btnFirst.Size = new System.Drawing.Size(43, 23);
+			this.btnFirst.Size = new System.Drawing.Size(44, 23);
 			this.btnFirst.TabIndex = 0;
+			this.btnFirst.Click += new System.EventHandler(this.btnFirst_Click);
 			// 
 			// btnLast
 			// 
 			this.btnLast.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLast.ImageOptions.Image")));
-			this.btnLast.Location = new System.Drawing.Point(172, 25);
+			this.btnLast.Location = new System.Drawing.Point(208, 25);
 			this.btnLast.Name = "btnLast";
 			this.btnLast.Size = new System.Drawing.Size(44, 23);
 			this.btnLast.TabIndex = 0;
+			this.btnLast.Click += new System.EventHandler(this.btnLast_Click);
 			// 
 			// groupBox2
 			// 
@@ -174,9 +189,9 @@
 			this.groupBox2.Controls.Add(this.btnFirst);
 			this.groupBox2.Controls.Add(this.btnLast);
 			this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.groupBox2.Location = new System.Drawing.Point(219, 118);
+			this.groupBox2.Location = new System.Drawing.Point(137, 118);
 			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Size = new System.Drawing.Size(240, 59);
+			this.groupBox2.Size = new System.Drawing.Size(306, 59);
 			this.groupBox2.TabIndex = 7;
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "اسهم التنقال";
@@ -197,6 +212,7 @@
 			this.txtID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtID.Location = new System.Drawing.Point(308, 37);
 			this.txtID.Name = "txtID";
+			this.txtID.ReadOnly = true;
 			this.txtID.Size = new System.Drawing.Size(184, 26);
 			this.txtID.TabIndex = 2;
 			this.txtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -246,13 +262,14 @@
 			this.Controls.Add(this.groupBox1);
 			this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.MaximizeBox = false;
 			this.Name = "frm_country";
 			this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.RightToLeftLayout = true;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "الدول";
+			this.Load += new System.EventHandler(this.frm_country_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dvg)).EndInit();
 			this.groupBox3.ResumeLayout(false);
 			this.groupBox2.ResumeLayout(false);

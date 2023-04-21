@@ -79,6 +79,7 @@
 			// txtID
 			// 
 			this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.txtID.Enabled = false;
 			this.txtID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtID.Location = new System.Drawing.Point(308, 37);
 			this.txtID.Name = "txtID";
@@ -127,6 +128,7 @@
 			this.btnNext.Name = "btnNext";
 			this.btnNext.Size = new System.Drawing.Size(44, 23);
 			this.btnNext.TabIndex = 2;
+			this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
 			// 
 			// btnPrevios
 			// 
@@ -135,6 +137,7 @@
 			this.btnPrevios.Name = "btnPrevios";
 			this.btnPrevios.Size = new System.Drawing.Size(43, 23);
 			this.btnPrevios.TabIndex = 3;
+			this.btnPrevios.Click += new System.EventHandler(this.btnPrevios_Click);
 			// 
 			// btnFirst
 			// 
@@ -143,6 +146,7 @@
 			this.btnFirst.Name = "btnFirst";
 			this.btnFirst.Size = new System.Drawing.Size(43, 23);
 			this.btnFirst.TabIndex = 0;
+			this.btnFirst.Click += new System.EventHandler(this.btnFirst_Click);
 			// 
 			// btnLast
 			// 
@@ -151,6 +155,7 @@
 			this.btnLast.Name = "btnLast";
 			this.btnLast.Size = new System.Drawing.Size(44, 23);
 			this.btnLast.TabIndex = 0;
+			this.btnLast.Click += new System.EventHandler(this.btnLast_Click);
 			// 
 			// groupBox3
 			// 
@@ -178,6 +183,7 @@
 			this.btnDeleteAll.Size = new System.Drawing.Size(98, 44);
 			this.btnDeleteAll.TabIndex = 3;
 			this.btnDeleteAll.Text = "مسح الكل";
+			this.btnDeleteAll.Click += new System.EventHandler(this.btnDeleteAll_Click);
 			// 
 			// btnAdd
 			// 
@@ -203,6 +209,7 @@
 			this.btnDelete.Size = new System.Drawing.Size(98, 44);
 			this.btnDelete.TabIndex = 2;
 			this.btnDelete.Text = "مسح";
+			this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
 			// 
 			// btnNew
 			// 
@@ -215,6 +222,7 @@
 			this.btnNew.Size = new System.Drawing.Size(97, 44);
 			this.btnNew.TabIndex = 4;
 			this.btnNew.Text = "جديد";
+			this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
 			// 
 			// btnSave
 			// 
@@ -227,6 +235,7 @@
 			this.btnSave.Size = new System.Drawing.Size(98, 44);
 			this.btnSave.TabIndex = 1;
 			this.btnSave.Text = "حفظ";
+			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
 			// 
 			// dvg
 			// 
@@ -252,6 +261,7 @@
 			this.RightToLeftLayout = true;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "تصنيفات الكتب";
+			this.Load += new System.EventHandler(this.frm_category_Load);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
 			this.groupBox2.ResumeLayout(false);

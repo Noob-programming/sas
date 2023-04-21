@@ -42,5 +42,30 @@ namespace libMVP.Logic.Services
 			command.Parameters.Add("@name", SqlDbType.NVarChar).Value = name;
 		}
 
+
+		public static bool categoryDeleteِAll()
+		{
+			// ReSharper disable once ConvertClosureToMethodGroup
+			return DBHelper.excuteData("categorydeleteAll", () => { });
+		}
+
+
+		public static DataTable categoryGetAll()
+		{
+			return DBHelper.getData("categoryGetAll", () => { });
+		}
+
+		//get last row in table
+		public static DataTable categoryGetLastRow()
+		{
+			return DBHelper.getData("categoryGetLastRow", () => { });
+		}
+
+		//get max id in table
+		public static DataTable categoryMaxID()
+		{
+			return DBHelper.getData("categoryMaxID", () => { });
+		}
+
 	}
 }

@@ -53,9 +53,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Logic\Presenter\categoryPresenter.cs" />
+    <Compile Include="Logic\Presenter\countryPresenter.cs" />
     <Compile Include="Logic\Services\categoryService.cs" />
+    <Compile Include="Logic\Services\countryService.cs" />
     <Compile Include="Logic\Services\DBHelper.cs" />
     <Compile Include="Model\CategoryModel.cs" />
+    <Compile Include="Model\CountryModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\Forms\frm_authors.cs">
@@ -95,6 +98,7 @@
       <DependentUpon>frm_Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Interface\ICategory.cs" />
+    <Compile Include="Views\Interface\ICountry.cs" />
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
