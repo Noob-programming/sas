@@ -8,7 +8,7 @@
 		//insert country
 		public static bool countryinsert(int id, string name)
 		{
-			return DBHelper.excuteData("countryinsert", () => countryParmeterInsert(id, name, DBHelper.sqlCommand));
+			return DBHelper.excuteData("countryInsert", () => countryParmeterInsert(id, name, DBHelper.sqlCommand));
 		}
 
 		private static void countryParmeterInsert(int id, string name, SqlCommand command)
@@ -20,7 +20,7 @@
 		//update country
 		public static bool countryUpdate(int id, string name)
 		{
-			return DBHelper.excuteData("countryupdate", () => countryParmeterUpdate(id, name, DBHelper.sqlCommand));
+			return DBHelper.excuteData("countryUpdate", () => countryParmeterUpdate(id, name, DBHelper.sqlCommand));
 		}
 
 		private static void countryParmeterUpdate(int id, string name, SqlCommand command)
@@ -32,7 +32,7 @@
 		//delete country
 		public static bool countryDelete(int id)
 		{
-			return DBHelper.excuteData("countrydelete", () => countryParmeterDelete(id, DBHelper.sqlCommand));
+			return DBHelper.excuteData("countryDelete", () => countryParmeterDelete(id, DBHelper.sqlCommand));
 		}
 
 		private static void countryParmeterDelete(int id, SqlCommand command)
@@ -43,7 +43,7 @@
 		// delete all data
 		public static bool countryDeleteAll()
 		{
-			return DBHelper.excuteData("countrydeleteAll", () => { });
+			return DBHelper.excuteData("countryDeleteAll", () => { });
 		}
 
 		//private static void countryParmeterDeleteAll()

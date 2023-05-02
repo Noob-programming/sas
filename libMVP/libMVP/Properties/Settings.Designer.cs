@@ -37,7 +37,7 @@ namespace libMVP.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("lib")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Library")]
         public string DBName {
             get {
                 return ((string)(this["DBName"]));

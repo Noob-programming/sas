@@ -10,7 +10,7 @@ namespace libMVP.Logic.Services
 		//insert data in category storge poseger
 		public static bool categoryinsert(int id, string name)
 		{
-			return DBHelper.excuteData("categoryinsert", () => categoryParmeterInsert(id, name, DBHelper.sqlCommand));
+			return DBHelper.excuteData("categoryInsert", () => categoryParmeterInsert(id, name, DBHelper.sqlCommand));
 		}
 
 		private static void categoryParmeterInsert(int id, string name, SqlCommand command)
@@ -22,7 +22,7 @@ namespace libMVP.Logic.Services
 		//delete
 		public static bool categoryDelete(int id)
 		{
-			return DBHelper.excuteData("categorydelete", () => categoryParmeterDelete(id, DBHelper.sqlCommand));
+			return DBHelper.excuteData("categoryDelete", () => categoryParmeterDelete(id, DBHelper.sqlCommand));
 		}
 
 		private static void categoryParmeterDelete(int id, SqlCommand command)
@@ -33,7 +33,7 @@ namespace libMVP.Logic.Services
 		//update
 		public static bool categoryUpdate(int id, string name)
 		{
-			return DBHelper.excuteData("categoryupdate", () => categoryParmeterUpdate(id, name, DBHelper.sqlCommand));
+			return DBHelper.excuteData("categoryUpdate", () => categoryParmeterUpdate(id, name, DBHelper.sqlCommand));
 		}
 
 		private static void categoryParmeterUpdate(int id, string name, SqlCommand command)
@@ -46,7 +46,7 @@ namespace libMVP.Logic.Services
 		public static bool categoryDeleteِAll()
 		{
 			// ReSharper disable once ConvertClosureToMethodGroup
-			return DBHelper.excuteData("categorydeleteAll", () => { });
+			return DBHelper.excuteData("categoryDeleteAll", () => { });
 		}
 
 

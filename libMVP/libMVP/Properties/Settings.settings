@@ -6,7 +6,7 @@
       <Value Profile="(Default)">Noob-King</Value>
     </Setting>
     <Setting Name="DBName" Type="System.String" Scope="User">
-      <Value Profile="(Default)">lib</Value>
+      <Value Profile="(Default)">Library</Value>
     </Setting>
     <Setting Name="SecurityInfo" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>

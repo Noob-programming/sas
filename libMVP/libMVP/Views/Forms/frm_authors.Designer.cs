@@ -31,7 +31,9 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_authors));
 			this.label3 = new System.Windows.Forms.Label();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.AouthorDate = new System.Windows.Forms.DateTimePicker();
 			this.cbxcountry = new System.Windows.Forms.ComboBox();
+			this.label4 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.txtID = new System.Windows.Forms.TextBox();
 			this.txtName = new System.Windows.Forms.TextBox();
@@ -48,8 +50,6 @@
 			this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
 			this.btnNew = new DevExpress.XtraEditors.SimpleButton();
 			this.dvg = new System.Windows.Forms.DataGridView();
-			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.label4 = new System.Windows.Forms.Label();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.groupBox3.SuspendLayout();
@@ -68,11 +68,11 @@
 			// 
 			// groupBox1
 			// 
+			this.groupBox1.Controls.Add(this.AouthorDate);
 			this.groupBox1.Controls.Add(this.cbxcountry);
 			this.groupBox1.Controls.Add(this.label3);
 			this.groupBox1.Controls.Add(this.label4);
 			this.groupBox1.Controls.Add(this.label2);
-			this.groupBox1.Controls.Add(this.textBox1);
 			this.groupBox1.Controls.Add(this.txtID);
 			this.groupBox1.Controls.Add(this.txtName);
 			this.groupBox1.Controls.Add(this.label1);
@@ -84,6 +84,14 @@
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "بيانات المؤلفين";
 			// 
+			// AouthorDate
+			// 
+			this.AouthorDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+			this.AouthorDate.Location = new System.Drawing.Point(23, 64);
+			this.AouthorDate.Name = "AouthorDate";
+			this.AouthorDate.Size = new System.Drawing.Size(183, 26);
+			this.AouthorDate.TabIndex = 7;
+			// 
 			// cbxcountry
 			// 
 			this.cbxcountry.FormattingEnabled = true;
@@ -91,6 +99,16 @@
 			this.cbxcountry.Name = "cbxcountry";
 			this.cbxcountry.Size = new System.Drawing.Size(158, 27);
 			this.cbxcountry.TabIndex = 6;
+			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label4.Location = new System.Drawing.Point(219, 67);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(83, 19);
+			this.label4.TabIndex = 4;
+			this.label4.Text = "تاريخ الميلاد :";
 			// 
 			// label2
 			// 
@@ -108,6 +126,7 @@
 			this.txtID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtID.Location = new System.Drawing.Point(315, 25);
 			this.txtID.Name = "txtID";
+			this.txtID.ReadOnly = true;
 			this.txtID.Size = new System.Drawing.Size(184, 26);
 			this.txtID.TabIndex = 2;
 			this.txtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -153,6 +172,7 @@
 			this.btnNext.Name = "btnNext";
 			this.btnNext.Size = new System.Drawing.Size(44, 23);
 			this.btnNext.TabIndex = 2;
+			this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
 			// 
 			// btnPrevios
 			// 
@@ -161,6 +181,7 @@
 			this.btnPrevios.Name = "btnPrevios";
 			this.btnPrevios.Size = new System.Drawing.Size(43, 23);
 			this.btnPrevios.TabIndex = 3;
+			this.btnPrevios.Click += new System.EventHandler(this.btnPrevios_Click);
 			// 
 			// btnFirst
 			// 
@@ -169,6 +190,7 @@
 			this.btnFirst.Name = "btnFirst";
 			this.btnFirst.Size = new System.Drawing.Size(43, 23);
 			this.btnFirst.TabIndex = 0;
+			this.btnFirst.Click += new System.EventHandler(this.btnFirst_Click);
 			// 
 			// btnLast
 			// 
@@ -177,6 +199,7 @@
 			this.btnLast.Name = "btnLast";
 			this.btnLast.Size = new System.Drawing.Size(44, 23);
 			this.btnLast.TabIndex = 0;
+			this.btnLast.Click += new System.EventHandler(this.btnLast_Click);
 			// 
 			// btnSave
 			// 
@@ -190,6 +213,7 @@
 			this.btnSave.Size = new System.Drawing.Size(98, 44);
 			this.btnSave.TabIndex = 1;
 			this.btnSave.Text = "حفظ";
+			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
 			// 
 			// groupBox3
 			// 
@@ -218,6 +242,7 @@
 			this.btnDeleteAll.Size = new System.Drawing.Size(98, 44);
 			this.btnDeleteAll.TabIndex = 3;
 			this.btnDeleteAll.Text = "مسح الكل";
+			this.btnDeleteAll.Click += new System.EventHandler(this.btnDeleteAll_Click);
 			// 
 			// btnAdd
 			// 
@@ -231,6 +256,7 @@
 			this.btnAdd.Size = new System.Drawing.Size(98, 44);
 			this.btnAdd.TabIndex = 0;
 			this.btnAdd.Text = "اضافة";
+			this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
 			// 
 			// btnDelete
 			// 
@@ -244,6 +270,7 @@
 			this.btnDelete.Size = new System.Drawing.Size(98, 44);
 			this.btnDelete.TabIndex = 2;
 			this.btnDelete.Text = "مسح";
+			this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
 			// 
 			// btnNew
 			// 
@@ -258,6 +285,7 @@
 			this.btnNew.Size = new System.Drawing.Size(97, 44);
 			this.btnNew.TabIndex = 4;
 			this.btnNew.Text = "جديد";
+			this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
 			// 
 			// dvg
 			// 
@@ -266,26 +294,6 @@
 			this.dvg.Name = "dvg";
 			this.dvg.Size = new System.Drawing.Size(425, 274);
 			this.dvg.TabIndex = 13;
-			// 
-			// textBox1
-			// 
-			this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox1.Location = new System.Drawing.Point(23, 65);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(184, 26);
-			this.textBox1.TabIndex = 3;
-			this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			// 
-			// label4
-			// 
-			this.label4.AutoSize = true;
-			this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.Location = new System.Drawing.Point(219, 67);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(83, 19);
-			this.label4.TabIndex = 4;
-			this.label4.Text = "تاريخ الميلاد :";
 			// 
 			// frm_authors
 			// 
@@ -298,13 +306,14 @@
 			this.Controls.Add(this.dvg);
 			this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.MaximizeBox = false;
 			this.Name = "frm_authors";
 			this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.RightToLeftLayout = true;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "بيانات المؤلفين";
+			this.Load += new System.EventHandler(this.frm_authors_Load);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
 			this.groupBox2.ResumeLayout(false);
@@ -336,6 +345,6 @@
 		private DevExpress.XtraEditors.SimpleButton btnNew;
 		private System.Windows.Forms.DataGridView dvg;
 		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.DateTimePicker AouthorDate;
 	}
 }
